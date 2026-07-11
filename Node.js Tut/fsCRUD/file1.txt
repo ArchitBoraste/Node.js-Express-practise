@@ -1,0 +1,8 @@
+{
+  "name": "Archit Boraste",
+  "email": "architboraste2006@gmail.com",
+  "role": "Junior Dev",
+  "skills": [
+    "Node.js, React JS, JS"
+  ]
+}

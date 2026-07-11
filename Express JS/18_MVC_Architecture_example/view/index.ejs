@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Task App</title>
+    <style>
+        body { font-family: sans-serif; margin: 50px; max-width: 400px; }
+        .task-item { display: flex; justify-content: space-between; padding: 8px; margin: 5px 0; border: 1px solid #ddd; }
+        .completed { text-decoration: line-through; color: #888; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Task List</h2>
+
+    <% if(error){ %>
+        <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="add-task" method="post">
+        <input type="text" name="taskTitle" placeholder="Write name of the task" />
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div style="margin-top: 20px;">
+        <% for(let i=0; i<tasks.length; i++){ %>
+            <div class="task-item">
+                <span class="<% tasks[i].completed ? 'completed' : '' %>">
+                    <%= tasks[i].title %>
+                </span>            
+                <span><%= tasks[i].completed ? '✓' : '⧖' %></span>
+            </div>
+        <% } %>
+    </div>
+</body> 
+</html>

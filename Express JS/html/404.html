@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* Deep dark slate */
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #ef4444; /* Vivid Red/Crimson */
+            margin-bottom: 10px;
+            letter-spacing: -2px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #94a3b8; /* Muted text color */
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background-color: #3b82f6; /* Accent Blue */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-home:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Oops! Page Not Found</h1>
+        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="/" class="btn-home">Back to Home</a>
+    </div>
+
+</body>
+</html>

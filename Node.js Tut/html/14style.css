@@ -1,0 +1,125 @@
+
+:root {
+    --primary-color: #2563eb;    /* Vibrant Royal Blue */
+    --primary-hover: #1d4ed8;    /* Darker Blue for buttons */
+    --text-color: #1f2937;       /* Soft Charcoal Black */
+    --bg-color: #f9fafb;         /* Off-White Clean Canvas */
+    --nav-link-color: #4b5563;   /* Slate Gray for links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   2. Header & Navigation Layout
+   ========================================================================== */
+header {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    list-style: none; /* Removes the default bullet points */
+    display: flex;
+    gap: 1.5rem;      /* Arranges links horizontally with breathing room */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   3. Main Hero Presentation Section
+   ========================================================================== */
+main {
+    flex: 1; /* Pushes the footer down cleanly if content is short */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #6b7280; /* Lighter slate gray for description text */
+    margin-bottom: 2rem;
+}
+
+/* Styled Interactive Button Component */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn:active {
+    transform: scale(0.98); /* Subtle compression animation on click */
+}
+
+/* ==========================================================================
+   4. Footer Customization
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    border-top: 1px solid #e5e7eb;
+    max-width: 1000px;
+    width: 100%;
+    margin: 4rem auto 0 auto;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <input type="text" placeholder="enter name" name="name">
+        <input type="text" placeholder="enter email" name="email">
+        <button type="submit">submit</submit>
+    </form>
+</body>
+</html>
+
+<!-- 
+Q) What is action="/submit" and method="post" 
+->action attribute tells the browser exactly where to send the data when a user clicks the submit button.
+for example we are currently on http://localhost:4900, then http://localhost:4900/submit will receive the
+name and email
+->method="post", 
+-->

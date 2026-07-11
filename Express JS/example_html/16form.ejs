@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Form Handling</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        .form-group { margin-bottom: 15px; }
+        .error { color: red; }
+        .success { color: green; background: #e6f4ea; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>User registration</h2>
+
+    <% if(error) { %>
+        <p class="error"><%= error %> </p>
+    <% } %>
+
+    <% if (user) { %>
+        <div class="success">
+            <p><strong>User Name: </strong><%= user.username %></p>
+            <p><strong>Email: </strong><%= user.email %></p>
+        </div>
+    <% } %>
+
+    <form action="/submit" method="post">
+        <input type="text" placeholder="Enter username" name="username" />
+        <input type="email" placeholder="Enter your email" name="email" />
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

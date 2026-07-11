@@ -1,0 +1,6 @@
+{
+  "name": "Archit Boraste",
+  "email": "architboraste2006@gmail.com",
+  "role": "Junior dev",
+  "location": "Pune"
+}
