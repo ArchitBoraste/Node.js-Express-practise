@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS Lab</title>
+</head>
+<body>
+    <h1>CORS Test</h1>
+    <button id="fetchBtn">Get Data from API</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener('click', () => {
+            fetch('http://localhost:3000/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerText = data.message;
+                    document.getElementById('result').style.color = "green";
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = "Error: Check your console!";
+                    document.getElementById('result').style.color = "red";
+                    console.error("Fetch error:", error);
+                });
+        });
+    </script>
+</body>
+</html>
